@@ -11,6 +11,8 @@ CREATE TABLE vendedor (
 
 CREATE TABLE cliente (
 	id_cliente INT(11) NOT NULL AUTO_INCREMENT,
+	telefono VARCHAR(16),
+	direccion VARCHAR(60),
 	PRIMARY KEY (id_cliente)
 ) 	ENGINE = InnoDB;
 
@@ -29,8 +31,6 @@ CREATE TABLE persona (
 	nombre VARCHAR(60),
 	apellidos VARCHAR(50),
 	genero VARCHAR(25),
-	telefono VARCHAR(16),
-	direccion VARCHAR(60),
 	barrio VARCHAR(60),
 	PRIMARY KEY (id_persona),
 	CONSTRAINT fk_persona_vendedor
