@@ -1,0 +1,128 @@
+/*Fuentes estilos*/
+ @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: 'Akaya Telivigala', cursive;
+	background: #DBD9CA;
+}
+.container{
+	width: 100%;
+	max-width: 1200px;
+	margin: auto;
+	padding-top: 150px;
+}
+/* Formularios*/
+form{
+	width: 45%;
+	margin: auto;
+	border: 1px solid #000;
+	padding: 20px 20px 0 20px;
+	background: #DDD;
+	border-radius: 10px;
+}
+/* 1ra parte*/
+.form-enc{
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #666;
+}
+
+h1{
+	text-align: center;
+	background: #fff;
+	color: #E68328;
+	padding: 5px;
+}
+/* 2da parte*/
+.form-cuerpo{
+	width: 100%;
+	padding: 10px;
+	border-bottom: 1px solid #666;
+}
+
+label, input{
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+label{
+	padding: 10px;
+	width: 30%;
+	text-align: right;
+}
+
+input{
+	font-family: 'Akaya Telivigala', cursive;
+	padding: 10px;
+	width: 60%;
+}
+.nombre, .contraseña{
+	border-top-style: none;
+	border-left-style: none;
+	border-right-style: none;
+}
+.nombre, .contraseña:active,
+.nombre, .contraseña:focus{
+	outline: none;
+}
+/* 3ra parte*/
+.form-pie{
+	width: 100%;
+	padding: 10px 10px 0 10px;
+	text-align: center;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #666;
+}
+
+.olvido{
+	padding-top: 0;
+	text-decoration: none;
+	background: 0;
+	width: 150px;
+	color: #333;
+	text-align: right;
+}
+a:hover{
+	background: rgba(0,0,0,0.5);
+}
+.olvido:hover{
+	background: 0;
+}
+.restablecer{
+	width: auto;
+	margin: 10px;
+	cursor: pointer;
+}
+.restablecer:hover{
+	background: rgba(0,0,0,0.5);
+}
+.enviar{
+	width: auto;
+	margin: 10px;
+	cursor: pointer;
+}
+.enviar:hover{
+	background: rgba(0,0,0,0.5);
+}
+/*cancelar*/
+.cancelar{
+	width: 100%;
+	padding: 10px;
+	text-align: center;
+}
+.cancelar a{
+	font-size: 1em;
+	text-decoration: none;
+	border: 1px solid #333;
+	color: #000;
+	padding: 10px 10px 5px 10px;
+}
+/*.cancelar:hover{
+	background: rgba(0,0,0,0.5);
+}*/

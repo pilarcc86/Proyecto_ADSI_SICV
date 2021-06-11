@@ -1,0 +1,294 @@
+/*Fuentes estilos*/
+ @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+
+/* Escritorio*/
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: 'Akaya Telivigala', cursive;
+}
+/*clases especiales*/
+.borde{
+	border: 1px solid gray;
+}
+.titulo{
+	padding: 60px 0 0 0;
+	background: #947F71;
+}
+.titulo h1{
+	text-align: center;
+	font-size: 2.3em;
+}
+/*contenedor*/
+.contenedor{
+	display: flex;
+	flex-flow: column wrap;
+	width: 95%;
+	max-width: 1200px;
+	margin: auto;
+}
+/*Navegador*/
+nav{
+	width: 95%;
+	max-width: 1200px;
+	height: 65px;
+	position: fixed;
+}
+.logo{
+	width: 20%;
+	height: 100%;
+	float: left;
+}
+.logo img{
+	width: 100%;
+	height: 100%;
+}
+.menu{
+	width: 65%;
+	height: 100%;
+	background: #4BD1FA;
+	float: left;
+}
+.ingresar{
+	width: 15%;
+	height: 100%;
+	background: #999;
+	float: left;
+	text-align: center;
+}
+/*NIvel 0*/
+nav ul{
+	list-style: none;
+	text-align: right;
+/*	height: 100%;*/
+}
+nav ul li{
+	width: 130px;
+	padding: 0;
+}
+nav ul li:hover ul{
+	display: block;
+}
+nav .menu ul li{
+	height: 100%;
+	background: #4BD1FA;
+	padding: 0 5px 0 0;	
+}
+nav .menu>ul>li{
+	display: inline-block;
+}
+nav .ingresar ul li{
+	width: 100%;
+	/*padding: 0 5px;*/
+}
+nav ul li a{
+	text-decoration: none;
+	display: block;
+	padding: 21.8px;
+	color: #fff;
+	font-size: 1em;
+	text-align: center;
+	border-bottom: 3px solid #CBB24D;
+}
+nav ul li a:hover{
+ background: rgba(0, 0, 0, 0.5);
+ border-bottom: 3px solid #fff;
+}
+/* Nivel 1*/
+nav li ul{
+	position: absolute;
+	display: none;
+}
+nav .ingresar li ul{
+	width: 15%;
+	background: #999; 
+}
+nav li ul li{
+	/*display: none;*/
+}
+/*Nivel 2*/
+/*encabezado*/
+header{
+	width: 100%;
+	height: 100vh;
+	background-image: url(../img/campo.jpg);
+	background-size: 100% 100%;
+}
+header h1{
+	font-size: 4em;
+}
+header h2{
+	font-size: 3em;
+}
+.opc-header{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	padding-top: 38%;
+	background: rgba(0,0,0,0.5);
+	color: #fff;
+}
+/*secciones*/
+section{
+	display: flex;
+	flex-flow: column wrap;
+	min-height: 90vh;
+}
+/*seccion de nosotros*/
+.nosotros{
+	display: flex;
+	flex-flow: column wrap;
+	text-align: center;
+	background: rgba(218, 215, 200, 0.95);
+}
+.nosotros p{
+	text-align: justify;
+	padding: 30px 10px 10px 10px;
+}
+.nosotros img{
+	width: 300px;
+	height: 200px;
+	border-radius: 50px;
+	padding-top: 30px;
+}
+.fila-nos-arb, .fila-nos-abj{
+	flex: 1;
+	display: flex;
+	flex-flow: row wrap;
+}
+.arb-col-nos-izq{
+	flex: 40%;
+}
+.arb-col-nos-der{
+	flex: 60%;
+}
+.abj-col-nos-izq{
+	flex: 60%;
+}
+.abj-col-nos-der{
+	flex: 40%;
+}
+/*sección de productos*/
+.productos{
+	flex-flow: column wrap;
+	background: rgba(218, 215, 200, 0.95);
+	text-align: center;
+}
+.productos img{
+	width: 150px;
+	height: 150px;
+}
+.productos p{
+	text-align: justify;
+	padding: 42px 30px 0 0;
+}
+.fila-pro-arb, .fila-pro-cnt, .fila-pro-abj{
+	display: flex;
+	flex: 1;
+	flex-flow: row wrap;
+}
+.col-pro-izq{
+	flex: 30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.col-pro-der{
+	flex: 70%;
+}
+/*sección de punto de venta*/
+.puntoventa{
+	display: flex;
+	flex-flow: row wrap;
+	background: rgba(218, 215, 200, 0.95);
+}
+.fila-punt-izq{
+	flex: 50%;
+}
+.fila-punt-izq iframe{
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+.fila-punt-der{
+	flex: 50%;
+	display: flex;
+	flex-flow: column wrap;
+}
+.col-der-punt-arb{
+	flex: 40%;
+}
+.col-der-punt-arb p{
+	text-align: justify;
+	padding: 20px;
+}
+.col-der-punt-abj{
+	flex: 60%;
+	padding: 20px;
+}
+.fila-punt-der .fab{
+	font-size: 3em;
+	display: inline-block;
+	padding: 20px 0 10px 40px;
+	color: #000;
+}
+.fila-punt-der .fab:hover{
+	color: #fff;
+}
+.fila-punt-der .fas{
+	font-size: 3em;
+	display: inline-block;
+	padding: 10px 0 5px 40px;
+	color: #000;
+}
+.fila-punt-der .fas:hover{
+	color: #fff;
+}
+footer{
+	height: 50px;
+	background: #333;
+}
+footer p{
+	text-align: center;
+	color: #fff;
+	padding-top: 15px;
+}
+
+				/*Tablet*/
+@media only screen and (max-width: 992px) {
+	/*navegador*/
+	nav{
+		height: 100px;
+	}
+	.logo{
+		flex: 20%;
+	}
+	.menu{
+		flex: 80%;
+	}
+	.ingresar{
+		flex: 100%;
+	}
+	/* Productos*/
+	.productos{
+		height: 1000px;
+	}
+	.col-nos-izq{
+		flex: 100%;
+	}
+	.col-nos-der{
+		flex: 100%;
+	}
+}
+				/* Celular*/
+@media only screen and (max-width: 576px) {
+	nav{
+		height: 150px;
+	}
+	.logo, .menu, .ingresar {
+		flex: 100%;
+	}
+}

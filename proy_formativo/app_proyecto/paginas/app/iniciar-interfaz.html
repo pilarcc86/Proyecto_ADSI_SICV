@@ -1,0 +1,49 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, 
+		initial-scale=1.0">
+		<title>inicio sesion registro</title>
+		<link rel="stylesheet" href="../css/all.css">
+		<link rel="stylesheet" href="css/estilos-sesion.css">
+	</head>
+	<body>
+		<div class="container">
+			<form action="" id="myForm">
+				<!-- este form constara de tres parte -->
+				<!-- encabezado-cuerpo-pie -->
+				<!-- 1ra parte -->
+				<div class="form-enc">		
+					<h1>Inicio de Sesión</h1>
+				</div>
+				<!-- 2da parte -->
+				<div class="form-cuerpo">
+					<div>
+						<label for="user">Usuario:</label>
+						<input type="email" placeholder="usuario@correo.com"
+						class="nombre" id="user" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}" required>
+						
+					</div>
+					<div>
+						<label for="pass">Contraseña:</label>
+						<input type="password" placeholder="escriba entre 5 y 8 caráctares" id="pass" class="contraseña" pattern="[A-Za-z0-9]{5,8}" required>
+					</div>
+				</div>
+				<!-- 3ra parte -->
+				<div class="form-pie">
+					<a class="olvido" href="">¿Olvido su Contraseña?</a>
+					<input type="reset" class="restablecer">
+					<input type="submit" class="enviar" placeholder="ENVIAR" value="ENVIAR">
+					<!-- <button type="submit" class="enviar" placeholder="ENVIAR" value="ENVIAR"></button> -->
+				</div>
+				<!-- 4ta parte -->
+				<div class="cancelar">
+					<a href="../index.html">Cancelar</a>
+				</div>
+			</form>
+		</div>
+		<script src="../js/sweetalert.min.js"></script>
+		<script src="../js/valid.js"></script>
+	</body>
+	</html>

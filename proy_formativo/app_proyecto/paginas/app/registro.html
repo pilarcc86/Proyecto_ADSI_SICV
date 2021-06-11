@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, 
+	initial-scale=1.0">
+	<title>Registro de Usuario</title>
+	<link rel="stylesheet" href="../css/all.css">
+	<link rel="stylesheet" href="css/estilos-registro.css">
+</head>
+<body>
+	<div class="container">
+		<form action="" id="myForm">
+			<!-- este form constara de tres parte -->
+			<!-- encabezado-cuerpo-pie -->
+			<!-- 1ra parte -->
+			<div class="form-enc">		
+				<h1>Registro de Usuario</h1>
+			</div>
+			<!-- 2da parte -->
+			<div class="form-cuerpo">
+					<!-- Nombre  -->
+					<div class="nom-usuario">
+						<label for="user">Nombre de Usuario:</label>	
+					</div>
+					<div class="nombre">
+						<input class="nombre" type="text" placeholder="Nombre"
+						id="nombre" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}" required>
+					</div>
+					<!-- Apellidos -->
+					<div>
+						<label>Apellidos:</label>
+					</div>
+					<div>
+						<input type="text" placeholder="Apellidos" class="apellidos" id="apellidos">	
+					</div>
+					<!-- Apellidos -->
+					<div>
+						<label>Correo Electrónico:</label>
+					</div>
+					<div>
+						<input type="email" placeholder="usuario@gmail.com" class="email" id="email" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}" required>	
+					</div>
+					<div>
+						<label for="pass">Contraseña:</label>
+					</div>
+					<div>
+						<input type="password" placeholder="escriba entre 5 y 8 caráctares" id="pass" class="contraseña" pattern="[A-Za-z0-9]{5,8}" required>	
+					</div>
+					<div>
+						<label for="pass">Confirmar Contraseña:</label>
+					</div>
+					<div>
+						<input type="password" placeholder="escriba entre 5 y 8 caráctares" id="pass" class="contraseña" pattern="[A-Za-z0-9]{5,8}" required>	
+					</div>
+					<div>
+						<label>Fecha de Nacimiento:</label>
+					</div>
+					<div class="f-nacimiento">
+						<!-- Dia de Nacimineto -->
+					<input list="dia" name="dia" class="dia" placeholder="Día">
+					<datalist id="dia">
+					<option value="1">
+					<option value="2">
+					<option value="3">
+					<option value="4">
+					<option value="5">
+					<option value="6">
+					<option value="7">
+					<option value="8">
+					<option value="9">
+					<option value="10">
+					<option value="11">
+					<option value="12">
+					<option value="13">
+					<option value="14">
+					<option value="15">
+					<option value="16">
+					<option value="17">
+					<option value="18">
+					<option value="19">
+					<option value="20">
+					<option value="21">
+					<option value="22">
+					<option value="23">
+					<option value="24">
+					<option value="25">
+					<option value="26">
+					<option value="27">
+					<option value="28">
+					<option value="29">
+					<option value="30">
+					<option value="31">
+					</datalist>
+						<!-- Mes de Nacimiento -->
+					<input list="nacimiento" name="nacimiento" class="nacimiento" placeholder="Mes">
+					<datalist id="nacimiento">
+					<option value="1">
+					<option value="2">
+					<option value="3">
+					<option value="4">
+					<option value="5">
+					<option value="6">
+					<option value="7">
+					<option value="8">
+					<option value="9">
+					<option value="10">
+					<option value="11">
+					<option value="12">
+					</datalist>
+						<!-- Año de Nacimiento -->
+					<input list="año" name="año" class="año" placeholder="Año">
+					<datalist id="año">
+					<option value="2021">
+					<option value="2020">
+					<option value="2019">
+					<option value="2018">
+					<option value="2017">
+					<option value="2016">
+					<option value="2015">
+					<option value="2014">
+					<option value="2013">
+					<option value="2012">
+					<option value="2011">
+					<option value="2010">
+					<option value="2009">
+					<option value="2008">
+					<option value="2007">
+					<option value="2006">
+					<option value="2005">
+					<option value="2004">
+					<option value="2003">
+					<option value="2002">
+					<option value="2001">
+					<option value="2000">
+					<option value="1999">
+					<option value="1998">
+					<option value="1997">
+					<option value="1996">
+					<option value="1995">
+					<option value="1994">
+
+					</datalist>
+				    </div>
+			</div>
+			<!-- 3ra parte -->
+			<div class="form-pie">
+				<a class="cancelar" href="../index.html">Cancelar</a>
+				<input type="submit" class="registrar" placeholder="REGISTRAR" value="REGISTRAR">
+			</div>
+		</form>
+	</div>
+</body>
+</html>

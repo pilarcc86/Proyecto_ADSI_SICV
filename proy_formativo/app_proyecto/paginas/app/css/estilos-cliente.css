@@ -1,0 +1,279 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+/* Clases especiales*/
+.borde{
+	border: 1px solid gray;
+}
+/* Contenenedor*/
+.contenedor{
+	width: 95%;
+	max-width: 1200px;
+	margin: auto;
+	/*margin-top: 8px;*/
+}
+/* Navegador*/
+nav{
+	width: 100%;
+	max-width: 1200px;
+	height: 50px;
+	background: #333;
+	display: flex;
+	flex-flow: row wrap;
+}
+.logo{
+	width: 25%;
+	height: 100%;
+	float: left;
+	background: #8C7C6C;
+}
+.logo img{
+	width: 100%;
+	height: 100%;
+}
+.navega{
+	width: 60%;
+	height: 100%;
+	float: left;
+	background: #39322B;
+	text-align: right;
+}
+
+a .navega{
+	width: 10px;
+	height: 20px;
+}
+.navega .fab{
+	font-size: 2em;
+	display: inline-block;
+	padding: 10px;
+	/*margin: 5px;*/
+	color: #000;
+	cursor: pointer;
+}
+.navega .fab:hover{
+	color: #fff;
+}
+.navega .fas{
+	text-align: right;
+	font-size: 2em;
+	display: inline-block;
+	padding: 10px;
+	/*margin: 5px;*/
+	color: #fff;
+	cursor: pointer;
+}
+.navega .fas:hover{
+	color: #fff;
+}
+.salir{
+	width: 15%;
+	height: 100%;
+	float: left;
+	background: rgba(140, 124, 108, 0.7);
+}
+
+/* lista ordena*/
+nav ul{
+	list-style: none;
+	text-align: center;
+}
+nav ul li{
+	width: 130px;
+	padding: 0;
+}
+nav ul li:hover{
+	display: block;
+}
+nav .salir ul li{
+	width: 100%;
+}
+nav ul li a{
+	text-decoration: none;
+	display: block;
+	padding: 14px 14px 14px 14px;
+	color: #fff;
+	font-size: 1em;
+	text-align: center;
+	border-bottom: 3px solid #CBB24D;
+}
+nav ul li a:hover{
+	background: rgba(0, 0, 0, 0.2);
+	border-bottom: 3px solid #fff;
+}
+/* Nivel 1*/
+nav li ul{
+	position: absolute;
+	display: none;
+}
+nav .salir li ul{
+	width: 15%;
+	background: #999;
+	text-align: center;
+}
+nav li ul li{
+	/*display: none;*/
+}
+
+/* Sección Principal*/
+section{
+	height: 85vh;
+	display: flex;
+	flex-flow: row wrap;
+}
+#btn-menu-lateral{
+	position: absolute;
+	font-size: 2em;
+	top: 4px;
+	left: 2.5%;
+	color: #000;
+	cursor: pointer;
+}
+.activar-panel{
+	width: 0;
+	transition: all 500ms linear;
+}
+/* panel lateral*/
+aside{
+	width: 25%;
+	background: #DBD9CA;
+	transition: all 500ms linear;
+}
+.mod-conf{
+	height: 16vh;
+	overflow: hidden;
+	border-bottom: 1px solid gray;
+	white-space: nowrap;
+}
+.modulos{
+	height: 66.5vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	white-space: nowrap;
+}
+.modulo{
+	min-height: 33.33%;
+	border-top: 1px solid gray;
+	text-align: center;
+}
+.modulo h1, .mod-conf h1{
+	text-align: center;
+	padding: 5px;
+	white-space: nowrap;
+}
+
+#mod-cuerpo-1{
+	padding: 10px;
+}
+#mod-cuerpo-1 a{
+	text-decoration: none;
+	color: #333;
+}
+/* area de trabajo*/
+main{
+	flex: 1;
+	height: 85vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+main iframe{
+	width: 100%;
+	height: 99%;
+	border: 0;
+}
+footer{
+	height: 50px;
+	background: #aaa;
+	display: flex;
+	flex-flow: row wrap;
+}
+footer p{
+	text-align: center;
+	color: #fff;
+	padding-top: 15px;
+}
+.pie-izq{
+	flex: 25%;
+	background: #39322B;
+}
+.pie-der{
+	flex: 75%;
+	background: rgba(140, 124, 108, 0.8);
+}
+
+				/*Tablet*/
+@media only screen and (max-width: 992px) {
+	/*navegador*/
+	nav{
+		height: 100px;
+	}
+	.logo{
+		flex: 25%;
+	}
+	.navega{
+		flex: 75%;
+	}
+	.salir{
+		flex: 100%;
+	}
+	/* Sección Principal*/
+	section{
+		height: 76.4vh;
+		flex-flow: column wrap;
+	}
+	.activar-panel{
+		width: 100%;
+		height: 0;
+	}
+	/* Panel Lateral*/
+	aside{
+		width: 100%;
+		height: 50px;
+		display: flex;
+		flex-flow: row wrap;	
+	}
+	.mod-conf{
+		flex: 25%;
+		height: 100%;
+		overflow: hidden;
+	}
+	.modulos{
+		flex: 75%;
+		height: 100%;
+		min-height: 100%;
+	}
+	.modulo{
+		width: 33.33%;
+		height: 100%;
+		border: 1px solid gray;
+		float: left;
+	}
+	.modulo h1, .mod-conf h1{
+		font-size: 0.9em;
+		padding: 15px 0;
+		height: 100%;
+		cursor: pointer;
+		white-space: normal;
+	}
+	#mod-cuerpo-0, #mod-cuerpo-1, #mod-cuerpo-2, #mod-cuerpo-3{
+		position: absolute;
+		z-index: 10;
+		width: 23.5%;
+		height: 300px;
+		padding: 0 20px;
+		overflow: hidden;
+		transition: all 500ms;
+		background:  #f2f2f2;
+		white-space: normal;
+	}
+	.activar-mod-cuerpo-0, .activar-mod-cuerpo-1, .activar-mod-cuerpo-2, .activar-mod-cuerpo-3{
+		height: 0!important;
+		transition: all 500ms linear;
+	}
+	/* Area de Trabajo*/
+	main{
+		height: 76.4vh;
+	}
+}

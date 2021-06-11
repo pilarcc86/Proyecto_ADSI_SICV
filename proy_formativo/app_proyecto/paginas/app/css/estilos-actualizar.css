@@ -1,0 +1,33 @@
+/*estilo de consulta usuario*/
+h1{
+	text-align: center;
+}
+
+/* estilos tabla*/
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 95%;
+	margin: auto;
+	border-collapse: collapse;
+	font-size: 0.7em;
+}
+
+th{
+	background: #333;
+	color: #fff;
+}
+td, th {
+	border: 1px solid #dddddd;
+	text-align: center;
+	padding: 5px;
+}
+
+a{
+	/*text-decoration: none;*/
+	color: #222;
+}
+
+tr:nth-child(even) {
+	background-color: #dddddd;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, 
+	initial-scale=1.0">
+	<title>Panel del Cliente</title>
+	<link rel="shortcut icon" href="../img/logo.png">
+	<link rel="stylesheet" href="../css/all.css">
+	<link rel="stylesheet" href="css/estilos-cliente.css">
+</head>
+<body>
+	<!-- Contenedor -->
+	<div class="borde contenedor">
+	<!-- Navegador -->
+	<nav >
+		<div class="logo">
+			<img src="../img/logo.png" alt="logo" title="logo">
+		</div>
+		<div class="navega">
+			<a href=""><i class="fas fa-home"></i></a>
+			<i class="fas fa-bell"></i>
+		</div>
+		<div class="salir">
+			<ul>
+				<li><a href="../index.html">Salir</a></li>
+			</ul>
+		</div>
+	</nav>
+	<!-- sección principal -->
+	<section class="">
+		<!-- panel lateral -->
+		<div id="btn-menu-lateral"><span>&#9776;</span></div>
+		<!-- Boton de menu -->
+		<aside id="panel-lateral" class="">
+			<div class="mod-conf">
+				<h1 id="mod-0">Configuración</h1>
+				<div id="mod-cuerpo-0"></div>
+			</div>
+			<div class="modulos">
+				<div class="modulo">
+					<h1 id="mod-1" >Modulo Cliente</h1>
+					<div id="mod-cuerpo-1">
+						<a href="modulos/1_usuario/crear-usuario.html" target="area-trabajo">Crear Usuario</a><br>
+						<a href="modulos/1_usuario/consultar-usuario.html" target="area-trabajo">Consultar Usuario</a><br>
+						<a href="modulos/1_usuario/actualizar-usuario.html" target="area-trabajo">Actualizar Usuario</a><br>
+						<a href="modulos/1_usuario/eleminar-usuario.html" target="area-trabajo">Eleminar Usuario</a>
+					</div>
+				</div>
+				<div class="modulo">
+					<h1 id="mod-2" >modulo principal</h1>
+					<div id="mod-cuerpo-2"></div>
+				</div>
+				<div class="modulo">
+					<h1 id="mod-3" >modulo secundario</h1>
+					<div id="mod-cuerpo-3"></div>
+				</div>
+			</div>
+		</aside>
+		<!-- area de trabajo -->
+		<main class="">
+			<iframe name="area-trabajo" src="modulos/componentes/pagina-cliente.html"></iframe>
+		</main>
+	</section>
+	<!-- pie de pagina -->
+	<footer>
+		<div class="pie-izq"></div>
+		<div class="pie-der">
+			<p>Todos los derechos reservados por el Gaes 1, SICV 2021</p>
+		</div>
+	</footer>
+	</div>
+	<script src="../js/script.js"></script>
+</body>
+</html>
