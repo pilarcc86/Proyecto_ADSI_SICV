@@ -45,9 +45,24 @@ h3 a{
 }
 
 .alin-der a {
-	border: 1px solid #333; 
+	border: 1px solid #999999; 
 	padding: 5px;
 	margin-top: 5px;
+	appearance: auto;
+    text-align: center;
+    color: -internal-light-dark(black, white);
+    background-color: -internal-light-dark(rgb(0, 0, 0), rgb(0, 0, 0));
+    box-sizing: border-box;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(0, 0, 0), rgb(0, 0, 0));
+    border-image: initial;
+}
+
+.alin-der a:hover{
+	background: rgba(0, 0, 0, 0.4);
+    /*border-bottom: 3px solid #fff;*/
 }
 
 .lateral h2{
