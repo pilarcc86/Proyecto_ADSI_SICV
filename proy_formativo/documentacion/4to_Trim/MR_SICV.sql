@@ -29,8 +29,8 @@ CREATE TABLE personas (
   CONSTRAINT fk_personas_roles
     FOREIGN KEY (idroles)
     REFERENCES roles (idroles)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -46,8 +46,8 @@ CREATE TABLE sesion_usuario (
   CONSTRAINT fk_sesion_usuario_personas
     FOREIGN KEY (id_usuario)
     REFERENCES personas (idpersonas)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -63,8 +63,8 @@ CREATE TABLE clientes (
   CONSTRAINT fk_clientes_personas
     FOREIGN KEY (idclientes)
     REFERENCES personas (idpersonas)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -80,8 +80,8 @@ CREATE TABLE vendedores (
   CONSTRAINT fk_vendedores_personas
     FOREIGN KEY (idvendedores)
     REFERENCES personas (idpersonas)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -99,8 +99,8 @@ CREATE TABLE productos (
   CONSTRAINT fk_productos_vendedores
     FOREIGN KEY (idvendedores)
     REFERENCES vendedores (idvendedores)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -110,11 +110,18 @@ ENGINE = InnoDB;
 
 CREATE TABLE factura (
   idfactura INT(11) NOT NULL AUTO_INCREMENT,
+  idpedidos INT(11) NOT NULL,
   total_pago VARCHAR(45) NULL,
   fecha_expedicion DATE NULL,
   hora VARCHAR(45) NULL,
-  PRIMARY KEY (`idfactura`))
-ENGINE = InnoDB;
+  PRIMARY KEY (`idfactura`),
+  CONSTRAINT fk_factura_pedidos
+  FOREIGN KEY (idpedidos)
+  REFERENCES pedidos (idpedidos)
+  ON DELETE CASCADE
+  ON UPDATE CASCADE
+
+) ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -128,16 +135,11 @@ CREATE TABLE pedidos (
   cantidad_productos VARCHAR(45) NULL,
   fecha DATE NULL,
   PRIMARY KEY (idpedidos),
-  CONSTRAINT fk_pedidos_factura
-    FOREIGN KEY (idfactura)
-    REFERENCES factura (idfactura)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
   CONSTRAINT fk_pedidos_clientes
     FOREIGN KEY (idclientes)
     REFERENCES clientes (idclientes)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -157,8 +159,8 @@ CREATE TABLE pedidos_has_productos (
   CONSTRAINT fk_pedidos_has_productos_productos
     FOREIGN KEY (productos_idproductos)
     REFERENCES productos (idproductos)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
