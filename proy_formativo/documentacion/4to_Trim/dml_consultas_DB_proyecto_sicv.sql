@@ -38,45 +38,59 @@ SELECT nombres, genero, barrio FROM personas WHERE barrio = 'MADRID' OR barrio =
 SELECT * FROM personas WHERE genero = 'FEMENINO' AND barrio = 'GIJÓN';
 
 -----------------------------------------------
----//consultas de la tabla vendedores//----
+-- 5 - Seleccionar todos los campo barrio de la tabla personas donde barrio sea igual 
+--	   'MADRID' 'Y' 'BARCELONA' y que lo ordene por la forma (Ascendente)
+-----------------------------------------------
+SELECT * FROM personas WHERE barrio = 'MADRID'
+OR barrio = 'BARCELONA' ORDER BY  barrio  ASC
+
+-----------------------------------------------
+-- 6 - Seleccionar todos los campo barrio de la tabla personas donde barrio sea igual 
+--	   'MADRID' 'Y' 'BARCELONA' y que lo ordene por la forma (Descendente)
+-----------------------------------------------
+SELECT * FROM personas WHERE barrio = 'MADRID'
+OR barrio = 'BARCELONA' ORDER BY  barrio  DESC
+
+-----------------------------------------------
+-- 7 - Seleccionar todos los campo barrio de la tabla personas donde barrio sea igual 
+--	   'MADRID' 'Y' 'BARCELONA' y que lo ordene por los apellidos (Ascendente o Descendente)
+-----------------------------------------------
+SELECT * FROM personas WHERE barrio = 'MADRID'
+OR barrio = 'BARCELONA' ORDER BY  nombres ASC
+
+
+-----------------------------------------------
+-- 8 - Seleccionar todos los campo barrio de la tabla personas donde barrio sea igual 
+--	   'MADRID' 'Y' 'BARCELONA' y que lo ordene por barrio y luego por
+--      los apellidos 
+-----------------------------------------------
+SELECT * FROM personas WHERE barrio = 'MADRID'
+OR barrio = 'BARCELONA' ORDER BY  barrio, apellidos;
+
+-----------------------------------------------
+-- 8 - Seleccionar todos los campo barrio de la tabla personas donde barrio sea igual 
+--	   'MADRID' 'Y' 'BARCELONA' y que lo ordene por barrio, nombres y luego por
+--      los apellidos 
+-----------------------------------------------
+SELECT * FROM personas WHERE barrio = 'MADRID' OR barrio = 'BARCELONA' 
+ORDER BY barrio, nombres, apellidos;
+
+-----------------------------------------------
+-- 10 - Seleccionar el campo barrio de la tabla personas para agrupar el campo barrio
+-----------------------------------------------
+SELECT barrio FROM personas GROUP BY barrio;
+
+
+-----------consultas INNER JOIN. OUTER JOINS (RIGT JOIN, LEFT JOIN {composiciones externas}	
+
+-----------------------------------------------
+-- 11 -  INNER JOIN: solo la informacion comun entre las tablas: personas y clientes
+-------	 personas de madrid 
 -----------------------------------------------
 
------------------------------------------------
--- 5 - Seleccionar todos los campos de la tabla vendedores donde
--- 	   el precio sea mayor a 80000
------------------------------------------------
-SELECT * FROM vendedores WHERE sueldo > 80000;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+SELECT * FROM personas INNER JOIN clientes 
+ON personas.idpersonas = clientes.idclientes 
+WHERE barrio = 'BARCELONA' ORDER BY clientes.idclientes
 
 
 
