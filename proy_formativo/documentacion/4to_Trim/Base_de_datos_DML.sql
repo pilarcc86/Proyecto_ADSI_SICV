@@ -68,7 +68,7 @@ SELECT * FROM personas WHERE barrio = 'MADRID'
 OR barrio = 'BARCELONA' ORDER BY  barrio, apellidos;
 
 -----------------------------------------------
--- 8 - Seleccionar todos los campo barrio de la tabla personas donde barrio sea igual 
+-- 9 - Seleccionar todos los campo barrio de la tabla personas donde barrio sea igual 
 --	   'MADRID' 'Y' 'BARCELONA' y que lo ordene por barrio, nombres y luego por
 --      los apellidos 
 -----------------------------------------------
@@ -79,6 +79,8 @@ ORDER BY barrio, nombres, apellidos;
 -- 10 - Seleccionar el campo barrio de la tabla personas para agrupar el campo barrio
 -----------------------------------------------
 SELECT barrio FROM personas GROUP BY barrio;
+
+
 
 
 -----------consultas INNER JOIN. OUTER JOINS (RIGT JOIN, LEFT JOIN {composiciones externas}	
@@ -93,7 +95,26 @@ ON personas.idpersonas = clientes.idclientes
 WHERE barrio = 'BARCELONA' ORDER BY clientes.idclientes
 
 
+-----------------------------------------------
+-- 12 -  LEFT JOIN: la informacion de la tabla de la izquierda (clientes) y la 
+-------	 informacion comun entre las tablas: clientes y pedidos.
+-------	 el cliente  de la direccion LAS FUENTES 78 se muestra la cantidad de productos
+-------  que ha pedido 
+-----------------------------------------------
 
+SELECT * FROM clientes LEFT JOIN pedidos
+ON clientes.idclientes = pedidos.idclientes
+WHERE direccion = 'LAS FUENTES 78' ORDER BY clientes.idclientes
+
+-----------------------------------------------
+-- 13 -  LEFT JOIN: la informacion de la tabla de la derecha (pedidos) y la 
+-------	 informacion comun entre las tablas: clientes y pedidos.
+-------	 Todos los pedidos que se hayan hecho con su respectivo cliente
+-----------------------------------------------
+
+SELECT * FROM clientes RIGHT JOIN pedidos ON 
+clientes.idclientes = pedidos.idclientes 
+ORDER BY clientes.idclientes
 
 
 
