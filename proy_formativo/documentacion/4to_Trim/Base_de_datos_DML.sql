@@ -76,17 +76,33 @@ SELECT * FROM personas WHERE barrio = 'MADRID' OR barrio = 'BARCELONA'
 ORDER BY barrio, nombres, apellidos;
 
 -----------------------------------------------
--- 10 - Seleccionar el campo barrio de la tabla personas para agrupar el campo barrio
+-- 10 - Seleccionar todos los campo total_pago de la tabla factura donde total_pago 
+--	   sea mayor o igual  10000
+-----------------------------------------------
+SELECT * FROM factura WHERE total_pago >= 10000
+
+-----------------------------------------------
+-- 11 - Seleccionar todos los fecha_expedicion de la tabla factura donde fecha_expedicion 
+--	   entre '2020-05-01' a '2020-06-21'
+-----------------------------------------------
+SELECT * FROM factura WHERE fecha_expedicion BETWEEN '2020-05-01' AND '2020-06-21'
+
+-----------------------------------------------
+-- 12 - Seleccionar el campo barrio de la tabla personas para agrupar el campo barrio
 -----------------------------------------------
 SELECT barrio FROM personas GROUP BY barrio;
 
+-----------------------------------------------
+-- 13 - Seleccionar el campo total_pago y sumar todo de la tabla factura
+-----------------------------------------------
+SELECT SUM(total_pago) FROM factura;
 
 
 
 -----------consultas INNER JOIN. OUTER JOINS (RIGT JOIN, LEFT JOIN {composiciones externas}	
 
 -----------------------------------------------
--- 11 -  INNER JOIN: solo la informacion comun entre las tablas: personas y clientes
+-- 14 -  INNER JOIN: solo la informacion comun entre las tablas: personas y clientes
 -------	 personas de madrid 
 -----------------------------------------------
 
@@ -96,7 +112,7 @@ WHERE barrio = 'BARCELONA' ORDER BY clientes.idclientes
 
 
 -----------------------------------------------
--- 12 -  LEFT JOIN: la informacion de la tabla de la izquierda (clientes) y la 
+-- 15 -  LEFT JOIN: la informacion de la tabla de la izquierda (clientes) y la 
 -------	 informacion comun entre las tablas: clientes y pedidos.
 -------	 el cliente  de la direccion LAS FUENTES 78 se muestra la cantidad de productos
 -------  que ha pedido 
@@ -107,7 +123,7 @@ ON clientes.idclientes = pedidos.idclientes
 WHERE direccion = 'LAS FUENTES 78' ORDER BY clientes.idclientes
 
 -----------------------------------------------
--- 13 -  LEFT JOIN: la informacion de la tabla de la derecha (pedidos) y la 
+-- 16 -  LEFT JOIN: la informacion de la tabla de la derecha (pedidos) y la 
 -------	 informacion comun entre las tablas: clientes y pedidos.
 -------	 Todos los pedidos que se hayan hecho con su respectivo cliente
 -----------------------------------------------
